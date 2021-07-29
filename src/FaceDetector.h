@@ -9,8 +9,8 @@ const static std::string caffeWeigthFile = "../data/res10_300x300_ssd_iter_14000
 class FaceDetector{
   public: 
     FaceDetector();
-    std::vector<cv::Rect> Detect(cv::Mat &frame);
-    void Draw(cv::Mat &frame);
+    void Detect(cv::Mat &frame);
+    std::vector<cv::Rect> GetFaces();
 
   private:
     cv::dnn::Net model_;
@@ -19,6 +19,7 @@ class FaceDetector{
     const cv::Scalar mean_;
     const double scalefactor_;
     float confidence_tresshold_;
+    std::vector<cv::Rect> faces_;
 
 };
 

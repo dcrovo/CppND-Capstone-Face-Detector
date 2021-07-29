@@ -13,8 +13,8 @@ FaceDetector::FaceDetector()
   }
 }
 
-std::vector<cv::Rect> FaceDetector::Detect(cv::Mat &frame) {
-
+void FaceDetector::Detect(cv::Mat &frame) {
+  faces_.clear();
   cv::Mat inputBlob = cv::dnn::blobFromImage(
       frame, scalefactor_, cv::Size(inWidth_, inHeight_), mean_, false, false);
 
@@ -22,7 +22,7 @@ std::vector<cv::Rect> FaceDetector::Detect(cv::Mat &frame) {
   cv::Mat result = model_.forward("detection_out");
   cv::Mat resultMatrix(result.size[2], result.size[3], CV_32F,
                        result.ptr<float>());
-  std::vector<cv::Rect> faces;
+
   for (int i = 0; i < resultMatrix.rows; i++) {
     float confidence = resultMatrix.at<float>(i, 2);
     if (confidence < confidence_tresshold_) {
@@ -33,7 +33,11 @@ std::vector<cv::Rect> FaceDetector::Detect(cv::Mat &frame) {
     int x2 = static_cast<int>(resultMatrix.at<float>(i, 5) * frame.cols);
     int y2 = static_cast<int>(resultMatrix.at<float>(i, 6) * frame.rows);
 
-    faces.emplace_back(x1, y1, (x2 - x1), (y2 - y1));
+    faces_.emplace_back(x1, y1, (x2 - x1), (y2 - y1));
   }
-  return faces;
+  
+}
+
+std::vector<cv::Rect> FaceDetector::GetFaces(){
+  return faces_;
 }

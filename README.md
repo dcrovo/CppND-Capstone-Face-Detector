@@ -1,4 +1,4 @@
-# CPPND: Capstone Hello World Repo
+# CPPND: Capstone Face Detection Application
 
 This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
@@ -24,3 +24,7 @@ In this project, you can build your own C++ application starting with this repo,
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./HelloWorld`.
+
+## References
+
+1.https://learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/
