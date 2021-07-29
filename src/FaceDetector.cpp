@@ -25,19 +25,15 @@ std::vector<cv::Rect> FaceDetector::Detect(cv::Mat &frame) {
   std::vector<cv::Rect> faces;
   for (int i = 0; i < resultMatrix.rows; i++) {
     float confidence = resultMatrix.at<float>(i, 2);
-    if (confidence < confidence_tresshold_){
-
-      int x1 = static_cast<int>(resultMatrix.at<float>(i, 3) * frame.cols);
-
-      int y1 = static_cast<int>(resultMatrix.at<float>(i, 4) * frame.rows);
-
-      int x2 = static_cast<int>(resultMatrix.at<float>(i, 5) * frame.cols);
-
-      int y2 = static_cast<int>(resultMatrix.at<float>(i, 6) * frame.rows);
-
-      faces.emplace_back(x1, y2, (x2 - x1), (y2 - y1));
-
+    if (confidence < confidence_tresshold_) {
+      continue;
     }
+    int x1 = static_cast<int>(resultMatrix.at<float>(i, 3) * frame.cols);
+    int y1 = static_cast<int>(resultMatrix.at<float>(i, 4) * frame.rows);
+    int x2 = static_cast<int>(resultMatrix.at<float>(i, 5) * frame.cols);
+    int y2 = static_cast<int>(resultMatrix.at<float>(i, 6) * frame.rows);
+
+    faces.emplace_back(x1, y1, (x2 - x1), (y2 - y1));
   }
   return faces;
 }
