@@ -2,9 +2,9 @@
 
 This project is an implemetation of a application for recognizing faces and drawing rectangles around them in real time with the image of a webcam:
 
-It consist of 2 clases and main:
+It consist of 2 clases and the main function:
 VideoProcessing which is doing the capturing of the video and drawing 
-FaceDetector which uses a ResNet-10 neurarl network pre trained model form Caffe
+FaceDetector which uses a ResNet-10 neurarl network pre trained model from Caffe
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -28,7 +28,7 @@ FaceDetector which uses a ResNet-10 neurarl network pre trained model form Caffe
 3. Compile: `cmake .. && make`
 4. Run it: `./face_detector.
 
-## Rubic points addressed
+## Rubric points addressed
 * The project demonstrates an understanding of C++ functions and control structures.
 * The project uses Object Oriented Programming techniques.
 * Classes use appropriate access specifiers for class members.
