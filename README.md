@@ -1,10 +1,10 @@
 # CPPND: Capstone Face Detection Application
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
+This project is an implemetation of a application for recognizing faces and drawing rectangles around them in real time with the image of a webcam:
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
-In this project, you can build your own C++ application starting with this repo, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+It consist of 2 clases and main:
+VideoProcessing which is doing the capturing of the video and drawing 
+FaceDetector which uses a ResNet-10 neurarl network pre trained model form Caffe
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -17,14 +17,25 @@ In this project, you can build your own C++ application starting with this repo,
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
+* OpenCV >= 1.4
+  * Linux: click here for installation instructions
+
 
 ## Basic Build Instructions
 
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./HelloWorld`.
+4. Run it: `./face_detector.
 
-## References
+## Rubic ponts addressed
+  # The project demonstrates an understanding of C++ functions and control structures.
+  # The project uses Object Oriented Programming techniques.
+  # Classes use appropriate access specifiers for class members.
+  # Class constructors utilize member initialization lists.
+  # The project makes use of references in function declarations.
 
-1.https://learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/
+
+## Atributions
+  This project is based on the explanation given in this webpage
+1. https://learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/

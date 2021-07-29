@@ -9,7 +9,6 @@ void VideoProcessing::StartCapture(FaceDetector &face_detector) {
     return;
   }
 
-
   while (true) {
     video_capture_ >> frame_;
     face_detector.Detect(frame_);
