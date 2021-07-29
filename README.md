@@ -29,11 +29,11 @@ FaceDetector which uses a ResNet-10 neurarl network pre trained model form Caffe
 4. Run it: `./face_detector.
 
 ## Rubic ponts addressed
-  # The project demonstrates an understanding of C++ functions and control structures.
-  # The project uses Object Oriented Programming techniques.
-  # Classes use appropriate access specifiers for class members.
-  # Class constructors utilize member initialization lists.
-  # The project makes use of references in function declarations.
+* The project demonstrates an understanding of C++ functions and control structures.
+* The project uses Object Oriented Programming techniques.
+* Classes use appropriate access specifiers for class members.
+* Class constructors utilize member initialization lists.
+* The project makes use of references in function declarations.
 
 
 ## Atributions
